@@ -1,7 +1,5 @@
-a {
-	color: red;
-}
+@import 'partials/variables';
+@import 'partials/grid';
+@import 'partials/typography';
+@import 'partials/buttons';
 
-p {
-	font-size: 15px;
-}
