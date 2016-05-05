@@ -1,0 +1,80 @@
+/**
+* Typography Styles
+*/
+//http://typecast.com/blog/a-more-modern-scale-for-web-typography check this out and reference it
+html, body {
+	font-size: $font-size;
+	font-family: $font-OpenSans;
+	background-color: $blue;
+}
+p {
+	font-size: $font-size;
+	line-height: $mobile-line-height + em;
+	margin: 0 0 ($mobile-line-height * $font-size) 0;
+	padding: 0;
+	color: #000;
+	max-width: 35em;
+}
+a {
+	text-decoration: none;
+	font-family: inherit;
+	color: $blue;
+	transition: all 0.25s;
+}
+a:hover {
+	cursor:pointer;
+	color: $blue-hover;
+}
+a:focus {
+	outline: none;
+}
+
+ul {
+	list-style: none;
+	color: #fff;
+}
+.disc {
+	list-style: disc;
+}
+
+$l:6;
+@for $i from 1 through 6 {
+	$j : $mobile-scale;
+	h#{$i} {
+	font-size: if(($font-size * $j * $l) < 16px, $font-size, ($font-size * $j * $l) );
+	line-height: $mobile-line-height + em;
+	margin: 0 0 if(($font-size * $j * $l) < 16px, (($mobile-line-height * $font-size) / 2), ($mobile-line-height * $font-size))  0;
+	padding: 0;
+	color: #fff;
+	}
+	$l: $l - 1;
+}
+//tablet
+@media screen and (min-width: 40em) {
+	$l:6;
+	@for $i from 1 through 6 {
+		$j : $tablet-scale;
+		h#{$i} {
+			font-size: if(($font-size * $j * $l) < 16px, $font-size, ($font-size * $j * $l) );
+			line-height: $desktop-line-height + em;
+			margin: 0 0 ($desktop-line-height * $font-size) 0;
+			padding: 0;
+		}
+		$l: $l - 1;
+	}
+}
+//Desktop
+@media screen and (min-width: 64em) {
+	$l:6;
+	@for $i from 1 through 6 {
+		$j : $desktop-scale;
+		h#{$i} {
+			font-size: if(($font-size * $j * $l) < 16px, $font-size, ($font-size * $j * $l) );
+			line-height: $desktop-line-height + em;
+			margin: 0 0 if(($font-size * $j * $l) < 16px, ($desktop-line-height*$font-size / 2), ($desktop-line-height*$font-size) ) 0;
+			// margin: 0 0 ($desktop-line-height*$font-size) 0;
+			padding: 0;
+		}
+		$l: $l - 1;
+	}
+}

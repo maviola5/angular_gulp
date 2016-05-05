@@ -1,0 +1,83 @@
+.header {
+	background: #fff;
+}
+.nav_handle {
+	float: left;
+	display: block;
+	margin: 7px 0;
+}
+.nav_handle__bar {
+	width: 24px;
+	height: 4px;
+	background: $blue;
+	margin-top: 3px;
+	display: block;
+	transition: all 0.25s;
+}
+.nav_handle__bar:first-child {
+	margin-top: 0;
+}
+.title_bar {
+	padding: $font-size 0;
+}
+.logo {
+	display: inline-block;
+	float: right;
+}
+.logo__img {
+	display: block;
+	width: 72px;
+}
+.logo__title {
+	font-family: $nacd-font;
+	text-transform: uppercase;
+	line-height: 10px;
+	width: 192px;
+    display: none;
+    color: $blue;
+}
+.nav {
+	float: left;
+}
+.nav__ul {
+	padding: 0;
+	margin: 0;
+}
+.nav__ul:after {
+	@extend .clear-fix
+} 
+.nav__li {
+	float: left;
+	padding: 0 20px;
+	font-family: $font-Oswald;
+	text-transform: uppercase;
+	line-height: 80px;
+}
+.nav__a {
+}
+.is-active {
+	
+}
+.nav_handle__bar:nth-child(1).is-active {
+    transform: rotate(45deg) translate3d(4px, 6px, 0);
+}
+.nav_handle__bar:nth-child(2).is-active {
+	opacity: 0;
+}
+.nav_handle__bar:nth-child(3).is-active {
+    transform: rotate(-45deg) translate3d(4px, -6px, 0);
+}
+@media screen and (min-width: 64em) {
+	.nav_handle {
+		display: none;
+	}
+	.logo {
+		float: left;
+	}
+	.logo__img {
+		width: 135px;
+	}
+	.logo__title {
+		display: block;
+	}
+}

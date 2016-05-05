@@ -1,0 +1,89 @@
+/** 
+*Buttons Styles 
+*/
+.btn {
+	font-family: $font-Oswald;
+	font-size: $font-size;
+	padding: 0.5em ($mobile-line-height/2) + em;
+	line-height: 1em;
+	margin-bottom: ($mobile-line-height/2) + em;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+}
+.btn-primary {
+	background-color: $blue;
+	color: #fff;
+}
+.btn-primary:hover {
+	background-color: $blue-hover;
+	color: #fff;
+}
+.btn-primary:hover:active {
+	background-color: $blue-active;
+	color: #fff;
+}
+.btn-secondary {
+	background-color: $green;
+	color: #fff;
+}
+.btn-secondary:hover {
+	background-color: $green-hover;
+	color: #fff;
+}
+.btn-secondary:hover:active {
+	background-color: $green-active;
+	color: #fff;
+}
+.btn-tertiary {
+	background-color: $orange;
+	color: #fff;
+}
+.btn-tertiary:hover {
+	background-color: $orange-hover;
+	color: #fff;
+}
+.btn-tertiary:active {
+	background-color: $orange-active;
+	color: #fff;
+}
+
+// inputs
+
+input {
+	font-family: $font-Oswald;
+	font-size: $font-size;
+	padding: 0.5em ($mobile-line-height/2) + em;
+	display: block;
+	width: 100%;
+}
+input:focus {
+	outline: none;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 40em) {}
+@media screen and (min-width: 64em) {
+	.btn {
+		font-size: $font-size * 1.25;
+		padding: 1em $desktop-line-height + em;
+		line-height: 1em;
+		margin-bottom: $desktop-line-height + em;
+	}
+}
+.btn-sm {
+	font-size: $font-size;
+}
+.btn-lg {	
+	font-size: $font-size * $desktop-line-height;
+}
+

@@ -1,0 +1,10 @@
+img {
+	display: block;
+	position: relative;
+}
+.motion-left {
+	transform : translate3d(0,100%,0);
+}
+.motion-right {
+	transform : translate3d(0,-100%,0);
+}

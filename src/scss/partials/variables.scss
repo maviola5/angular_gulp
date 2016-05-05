@@ -1,0 +1,46 @@
+$font-size:16px;
+
+$desktop-line-height: 1.5;
+$mobile-line-height: 1.25;
+
+$mobile-scale: 0.333;
+$tablet-scale: 0.4;
+$desktop-scale: 0.666;
+
+$font-OpenSans: 'Open Sans', sans-serif;
+$font-Oswald: 'Oswald', sans-serif;
+$font-Roboto: 'Roboto Condensed', sans-serif;
+
+$columns:12;
+$single-column-width:(100/$columns);
+$gutter: $font-size;
+
+$container-width: 1200px;
+
+$common-padding: ($font-size/2) $font-size;
+$common-transition: all 0.25s ease-out;
+
+$carousel-height : 10px;
+
+//color pallate or however you spell it
+
+// $orange : #e87921;
+// $orange-hover : #d06c1d;
+// $orange-active : #b9601a;
+$nacd-font : 'Fira Sans', sans-serif;
+
+$orange : #c05f12;
+$orange-hover : #ac5510;
+$orange-active : #994c0e;
+
+$blue : #003a62;
+$blue-hover: #194d71;
+$blue-active: #326181;
+
+$green : #48732a;
+$green-hover : #406725;
+$green-active : #395c21;
+
+$white : #ffffff;
+$white-hover : #e5e5e5;
+$white-active : #cccccc;

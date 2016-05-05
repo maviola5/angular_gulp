@@ -1,0 +1,82 @@
+.ui {
+	background-color: $blue;
+	padding: $font-size 0 ;
+    display: none;
+}
+.ui__search {
+    display: inline-block;
+    float: left;
+}
+.ui__search:after {
+    clear: both;
+    content: "";
+    display: table;
+} 
+.ui__search_input {
+    width: 208px;
+    float: left;
+    border: 0;
+    background: #fff;
+    line-height: 1.5;
+    font-size: $font-size;
+    background-color: #fff;
+}
+.ui__icon_base {
+	font-size: 2em;
+    line-height: 40px;
+    float: left;
+    padding: 0 4px;
+    color: #fff;
+}
+.ui__search_icon {
+    @extend .ui__icon_base;
+}
+.ui__text_base {
+	float: left;
+    font-family: $font-Oswald;
+    font-size: $font-size;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding: 0 $font-size/2 0 0;
+    color: #fff;
+    font-weight: 400;
+}
+.ui__text_base:after {
+	content: "|";
+	padding: 0 0 0 $font-size/2;
+}
+.ui__account {
+    float: left;
+    font-family: $font-Oswald;
+    font-size: $font-size;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding: 0 $font-size;
+    color: #fff;
+}
+.ui__cart {
+	@extend .ui__icon_base
+}
+.ui__state {
+	display: inline-block;
+	float: right;
+}
+.ui__login {
+	@extend .ui__text_base;
+}
+.ui__username {
+	@extend .ui__text_base;
+}
+.ui__member_type {
+	@extend .ui__text_base;
+	padding-right: 0;
+}
+.ui__member_type:after {
+	content: "";
+	padding: 0;
+}
+@media screen and (min-width: 64em){
+    .ui {
+        display: block;
+    }
+}

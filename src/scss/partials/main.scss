@@ -1,0 +1,17 @@
+.main {
+	// width: 100%;
+	position: relative;
+	background: #fff;
+}
+.main_container {
+	@extend .container;
+}
+.main_row {
+	@extend .row;
+}
+.main_row:after {
+	@extend .row:after;
+}
+.main_body {
+	@extend .lg_8;
+}

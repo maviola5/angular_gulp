@@ -1,0 +1,118 @@
+/** 
+* Grid Base Styles 
+*/
+
+* {
+    box-sizing: border-box;
+}
+.container {
+	position: relative;
+	max-width: $container-width;
+	padding-right: $gutter;
+    padding-left: $gutter;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid {
+	width: 100%;
+	padding-right: $gutter;
+    padding-left: $gutter;
+}
+.row {
+	margin-right: -$gutter;
+	margin-left: -$gutter;
+	max-width: $container-width;
+}
+.row:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+@for $i from 1 through $columns {
+	.lg_#{$i} {
+		width: 100%;
+		float: left;
+		padding-right: $gutter;
+		padding-left: $gutter;
+		position: relative;
+	}
+}
+@for $i from 1 through $columns {
+	.md_#{$i} {
+		width: 100%;
+		float: left;
+		padding-right: $gutter;
+		padding-left: $gutter;
+		position: relative;
+	}
+}
+@for $i from 1 through $columns {
+	.sm_#{$i} {
+		@if round($single-column-width * $i) == 100 { 
+		width: 100%;
+		float: left;
+		padding-right: $gutter;
+		padding-left: $gutter;
+		position: relative;
+		}
+		@if round($single-column-width * $i) != 100 {
+		width: $single-column-width * $i * 1%;
+		float: left;
+		padding-right: $gutter;
+		padding-left: $gutter;
+		position: relative;
+		}
+	}
+}
+@media screen and (min-width: 40em) {
+	@for $i from 1 through $columns {
+		.md_#{$i} {
+			@if round($single-column-width * $i) == 100 { 
+			width: 100%;
+			float: left;
+			padding-right: $gutter;
+			padding-left: $gutter;
+			}
+			@if round($single-column-width * $i) != 100 {
+			width: $single-column-width * $i * 1%;
+			float: left;
+			padding-right: $gutter;
+			padding-left: $gutter;
+			}
+		}
+	}
+}
+@media screen and (min-width: 64em) {
+	@for $i from 1 through $columns {
+		.lg_#{$i} {
+			@if round($single-column-width * $i) == 100 { 
+			width: 100%;
+			float: left;
+			padding-right: $gutter;
+			padding-left: $gutter;
+			}
+			@if round($single-column-width * $i) != 100 {
+			width: $single-column-width * $i * 1%;
+			float: left;
+			padding-right: $gutter;
+			padding-left: $gutter;
+			}
+		}
+	}
+}
+
+img {
+	height: auto;
+	width: 100%;
+}
+
+.table {
+	display: table;
+}
+.table_cell {
+	display: table-cell;
+	float: none;
+}
+.vert_align {
+	vertical-align: middle;
+}

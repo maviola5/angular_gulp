@@ -1,0 +1,133 @@
+.nav {}
+.nav_container {
+    @extend .container;
+}
+.nav_row {
+    @extend .row;
+}
+.nav_row:after {
+    @extend .row:after;
+}
+.nav_ul {
+    margin:0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 16px;
+    @extend .lg_12;
+    position: relative;
+}
+.nav_ul:after {
+    clear:both;
+    display: table;
+    content:"";
+}
+.nav_li {
+    @extend .sm_2;
+    text-align: center;
+    background-color: $blue;
+    // position: relative;
+}
+.nav_li:hover {
+    background-color: $blue-hover;
+}
+.nav_li:hover:active {
+    background-color: $blue-active;
+}
+.nav_a {
+    font-family: $font-Oswald;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 20px 30px;
+    display: block;
+}
+.nav_a:hover {
+    color: #fff;
+}
+.nav_ul__secondary {
+    margin:0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    display: none;
+    position: fixed;
+    max-width: 968px;
+    top: 61px;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+main {
+    min-height: 800px;
+}
+.nav_li__secondary {
+    background-color: $blue;
+}
+.nav_li__secondary:hover {
+    background-color: $blue-hover;
+}
+.nav_li__secondary:active {
+    background-color: $blue-active;
+}
+.nav_a__secondary {
+}
+.nav_a__secondary {
+    font-family: $font-Oswald;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 20px 30px;
+    display: block;
+}
+.nav_a__secondary:hover {
+    color: #fff;
+}
+// body.js-is_active {
+//     overflow: hidden;
+// }
+.nav_ul.js-is_active {
+    transform: translate3d(0,0,0);
+}
+.nav_mobile {
+    position: fixed;
+    top: 0;
+    // display: none;
+    visibility: hidden;
+    color: #fff;
+    transition: all 0.5s;
+    font-family: $font-Oswald;
+    text-transform: uppercase;
+}
+.nav_mobile__li {
+    padding: 8px 0;
+}
+.nav_mobile__a {
+    color: #fff;
+}
+.is-active.nav__li {
+    background-color: $blue;
+    color: #fff;
+}
+.is-active.nav__a {
+    color: #fff;
+}
+.is-active.nav_mobile {
+    visibility: visible;
+}
+@media screen and (min-width: 64em){
+    .nav_ul__secondary.js-is_active {
+        display: block;
+        overflow-x: auto;
+    } 
+    .close_nav {
+        font-size: 32px;
+        padding: 20px 30px;
+        display: block;
+        text-align: right;
+    }
+    .nav_li.js-is_active {
+        background-color: $blue-active;
+    }
+}

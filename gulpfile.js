@@ -19,58 +19,58 @@ var gulp = require('gulp'),
     del = require('del');
 
 // Styles
-gulp.task('styles', function() {
-  return sass('src/styles/main.scss', { style: 'expanded' })
+gulp.task('css', function() {
+  return sass('src/scss/app.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest('dist/styles'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
-    .pipe(gulp.dest('dist/styles'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
 // Scripts
-gulp.task('scripts', function() {
-  return gulp.src('src/scripts/**/*.js')
-    .pipe(jshint('.jshintrc'))
+gulp.task('js', function() {
+  return gulp.src('src/js/**/*.js')
+    // .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/scripts'))
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 // Images
-gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
+gulp.task('img', function() {
+  return gulp.src('src/img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/images'))
+    .pipe(gulp.dest('dist/img'))
     .pipe(notify({ message: 'Images task complete' }));
 });
 
 // Clean
 gulp.task('clean', function() {
-  return del(['dist/styles', 'dist/scripts', 'dist/images']);
+  return del(['dist/css', 'dist/js', 'dist/img']);
 });
 
 // Default task
 gulp.task('default', ['clean'], function() {
-  gulp.start('styles', 'scripts', 'images');
+  gulp.start('css', 'js', 'img');
 });
 
 // Watch
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('src/styles/**/*.scss', ['styles']);
+  gulp.watch('src/scss/**/*.scss', ['css']);
 
   // Watch .js files
-  gulp.watch('src/scripts/**/*.js', ['scripts']);
+  gulp.watch('src/js/**/*.js', ['js']);
 
   // Watch image files
-  gulp.watch('src/images/**/*', ['images']);
+  gulp.watch('src/img/**/*', ['img']);
 
   // Create LiveReload server
   livereload.listen();
