@@ -324,4 +324,3 @@ function ticker(){
 		.removeClass('is-active');
 	}
 }
-$(".carousel").carousel();

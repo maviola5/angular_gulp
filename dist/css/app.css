@@ -998,7 +998,6 @@ input:focus {
 html, body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  background-color: #003a62;
 }
 
 p {
@@ -1041,6 +1040,7 @@ h1 {
   margin: 0 0 20px 0;
   padding: 0;
   color: #fff;
+  font-family: "Oswald", sans-serif;
 }
 
 h2 {
@@ -1049,6 +1049,7 @@ h2 {
   margin: 0 0 20px 0;
   padding: 0;
   color: #fff;
+  font-family: "Oswald", sans-serif;
 }
 
 h3 {
@@ -1057,6 +1058,7 @@ h3 {
   margin: 0 0 20px 0;
   padding: 0;
   color: #fff;
+  font-family: "Oswald", sans-serif;
 }
 
 h4 {
@@ -1065,6 +1067,7 @@ h4 {
   margin: 0 0 10px 0;
   padding: 0;
   color: #fff;
+  font-family: "Oswald", sans-serif;
 }
 
 h5 {
@@ -1073,6 +1076,7 @@ h5 {
   margin: 0 0 10px 0;
   padding: 0;
   color: #fff;
+  font-family: "Oswald", sans-serif;
 }
 
 h6 {
@@ -1081,6 +1085,7 @@ h6 {
   margin: 0 0 10px 0;
   padding: 0;
   color: #fff;
+  font-family: "Oswald", sans-serif;
 }
 
 @media screen and (min-width: 40em) {
