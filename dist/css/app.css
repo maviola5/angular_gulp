@@ -999,7 +999,6 @@ html, body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: #000;
-  background-color: #003a62;
 }
 
 p {
@@ -1177,12 +1176,12 @@ img {
 
 .motion-left {
   -webkit-transform: translate3d(0, 100%, 0);
-          transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
 }
 
 .motion-right {
   -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
 .carousel {
@@ -1453,7 +1452,7 @@ img {
 
 .nav_handle__bar:nth-child(1).is-active {
   -webkit-transform: rotate(45deg) translate3d(4px, 6px, 0);
-          transform: rotate(45deg) translate3d(4px, 6px, 0);
+  transform: rotate(45deg) translate3d(4px, 6px, 0);
 }
 
 .nav_handle__bar:nth-child(2).is-active {
@@ -1462,7 +1461,7 @@ img {
 
 .nav_handle__bar:nth-child(3).is-active {
   -webkit-transform: rotate(-45deg) translate3d(4px, -6px, 0);
-          transform: rotate(-45deg) translate3d(4px, -6px, 0);
+  transform: rotate(-45deg) translate3d(4px, -6px, 0);
 }
 
 @media screen and (min-width: 64em) {
@@ -1569,7 +1568,7 @@ main {
 
 .nav_ul.js-is_active {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .nav_mobile {
@@ -1682,7 +1681,7 @@ main {
 
 .is-active.inner-wrap {
   -webkit-transform: translate3d(70%, 0, 0);
-          transform: translate3d(70%, 0, 0);
+  transform: translate3d(70%, 0, 0);
 }
 
 .dimmer {
@@ -1852,7 +1851,7 @@ main {
   margin: auto;
   box-shadow: 2px 4px 10px #000;
   -webkit-transform: translate3d(0, -100%, 0);
-          transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
   max-height: 100%;
   overflow-y: scroll;
   transition: -webkit-transform 0.25s;
@@ -1862,7 +1861,7 @@ main {
 
 .modal.js-is_active {
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   z-index: 101;
   overflow-x: hidden;
 }
@@ -1934,7 +1933,7 @@ main {
 @media screen and (min-width: 64em) {
   .modal.js-is_active {
     -webkit-transform: translate3d(0, 10%, 0);
-            transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
   }
 }
 /**

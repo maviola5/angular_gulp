@@ -3,6 +3,8 @@
  * $ npm install gulp-ruby-sass gulp-autoprefixer gulp-cssnano gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename gulp-livereload gulp-cache del --save-dev
  */
 
+ // npm install --save-dev jshint gulp-jshint !!solves jshint dependency 
+
 // Load plugins
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
@@ -21,7 +23,10 @@ var gulp = require('gulp'),
 // Styles
 gulp.task('css', function() {
   return sass('src/scss/app.scss', { style: 'expanded' })
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer({ 
+      browsers: ['last 2 version'], 
+      cascade: false })
+    )
     .pipe(gulp.dest('dist/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
