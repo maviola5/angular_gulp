@@ -1,1 +1,6 @@
+/**
+*	Page functions
+*
+**/
+
 $(".carousel").carousel();

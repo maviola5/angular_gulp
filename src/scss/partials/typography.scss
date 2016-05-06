@@ -5,7 +5,8 @@
 html, body {
 	font-size: $font-size;
 	font-family: $font-OpenSans;
-	// background-color: $blue;
+	color : #000;
+	background-color: $blue;
 }
 p {
 	font-size: $font-size;
@@ -45,7 +46,7 @@ $l:6;
 	line-height: $mobile-line-height + em;
 	margin: 0 0 if(($font-size * $j * $l) < 16px, (($mobile-line-height * $font-size) / 2), ($mobile-line-height * $font-size))  0;
 	padding: 0;
-	color: #fff;
+	// color: #fff;
 	font-family: $font-Oswald;
 	}
 	$l: $l - 1;

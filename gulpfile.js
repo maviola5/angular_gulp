@@ -50,6 +50,13 @@ gulp.task('img', function() {
     .pipe(notify({ message: 'img task complete' }));
 });
 
+//HTML
+gulp.task('html',function(){
+  return gulp.src('dist/templates')
+    .pipe(notify({ message: 'template task complete'}));
+});
+
+
 // Clean
 gulp.task('clean', function() {
   return del(['dist/css', 'dist/js', 'dist/img']);
@@ -72,8 +79,11 @@ gulp.task('watch', function() {
   // Watch image files
   gulp.watch('src/img/**/*', ['img']);
 
+  // Watch html templates
+  gulp.watch('dist/templates/*.html');
+
   // Create LiveReload server
-  livereload.listen();
+  livereload.listen(35729);
 
   // Watch any files in dist/, reload on change
   gulp.watch(['dist/**']).on('change', livereload.changed);

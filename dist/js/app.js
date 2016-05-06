@@ -1,95 +1,3 @@
-/***************************************
-**************BREAK OUT*****************
-***************************************/
-
-/**
-*	jQuery Nav Handle Plugin
-*	Author: Tony Viola	
-*	Description: Mobile handle for navigation menu
-*
-*
-**/
-
-$(".nav_handle").on("click", mobileNavToggle);
-// $(".dimmer").on("click", mobileNavToggle);
-
-
-function mobileNavToggle(){
-	var active = $(this).hasClass('is-active');
-	if(active){
-		$(this)
-		.removeClass('is-active')
-		.children()
-		.removeClass('is-active');
-		$("body").removeClass('is-active');
-		// $("#main").removeClass('is-active');
-		// $("#footer").removeClass('is-active');
-		// $("#header").removeClass('is-active');
-		$(".dimmer").removeClass('is-active');
-		$(".inner-wrap").removeClass('is-active');
-		$(".nav_mobile").removeClass('is-active');
-	} else {
-		$(this)
-		.addClass("is-active")
-		.children()
-		.addClass('is-active');
-		// $("#main").addClass('is-active');
-		// $("#footer").addClass('is-active');
-		// $("#header").addClass('is-active');
-		$(".dimmer").addClass('is-active');
-		$(".inner-wrap").addClass("is-active");
-		$("body").addClass("is-active");
-		$(".nav_mobile").addClass('is-active');
-	}
-}
-
-// $(".nav_a").click(openNav);
-
-// function openNav(e){
-// 	e.preventDefault();
-// 	var $this = $(this);
-// 	var active = $this.hasClass('js-is_active');
-// 	var body = $(".nav_ul");
-
-
-// 	if(active){
-// 		$this.removeClass('js-is_active');
-// 		$(this).parent().removeClass("js-is_active");
-// 		$(this).next(".nav_ul__secondary").removeClass("js-is_active");
-// 		body.removeClass('js-is_active');
-// 	} else {
-// 		$(".nav_a.js-is_active").removeClass('js-is_active');
-// 		$(".nav_ul__secondary.js-is_active").removeClass('js-is_active');
-// 		$(".nav_li__seconday.js-is_active").removeClass('js-is_active');
-// 		$(".nav_li.js-is_active").removeClass('js-is_active');
-// 		$this.addClass('js-is_active');
-// 		$(this).parent().addClass("js-is_active");
-// 		$(this).next(".nav_ul__secondary").addClass("js-is_active");
-// 		body.addClass('js-is_active');
-// 	}
-// }
-
-// $(".close_nav").click(function(){
-// 	$(".nav_a.js-is_active").removeClass('js-is_active');
-// 	$(".nav_ul__secondary.js-is_active").removeClass('js-is_active');
-// 	$(".nav_li__seconday.js-is_active").removeClass('js-is_active');
-// 	$(".nav_li.js-is_active").removeClass('js-is_active');
-// });
-
-
-
-
-
-
-
-
-
-
-
-/***************************************
-**************BREAK OUT*****************
-***************************************/
-
 /** 	
 *	jQuery Carousel Plugin (w/ jQuery Slide Motion plugin)
 *	Author: Tony Viola	
@@ -286,20 +194,6 @@ $.fn.slideMotion = function(direction, isActive) {
 	}
 })(jQuery);
 
-/***************************************
-**************BREAK OUT*****************
-***************************************/
-
-/***************************************
-**************EVENT LISTENERS***********
-***************************************/
-
-$(".carousel").carousel();
-
-
-/***************************************
-**************BREAK OUT*****************
-***************************************/
 
 /** 	
 *	Market Ticker
@@ -324,4 +218,49 @@ function ticker(){
 		.removeClass('is-active');
 	}
 }
+/**
+*	jQuery Nav Handle Plugin
+*	Author: Tony Viola	
+*	Description: Mobile handle for navigation menu
+*
+*
+**/
+
+$(".nav_handle").on("click", mobileNavToggle);
+// $(".dimmer").on("click", mobileNavToggle);
+
+
+function mobileNavToggle(){
+	var active = $(this).hasClass('is-active');
+	if(active){
+		$(this)
+		.removeClass('is-active')
+		.children()
+		.removeClass('is-active');
+		$("body").removeClass('is-active');
+		// $("#main").removeClass('is-active');
+		// $("#footer").removeClass('is-active');
+		// $("#header").removeClass('is-active');
+		$(".dimmer").removeClass('is-active');
+		$(".inner-wrap").removeClass('is-active');
+		$(".nav_mobile").removeClass('is-active');
+	} else {
+		$(this)
+		.addClass("is-active")
+		.children()
+		.addClass('is-active');
+		// $("#main").addClass('is-active');
+		// $("#footer").addClass('is-active');
+		// $("#header").addClass('is-active');
+		$(".dimmer").addClass('is-active');
+		$(".inner-wrap").addClass("is-active");
+		$("body").addClass("is-active");
+		$(".nav_mobile").addClass('is-active');
+	}
+}
+/**
+*	Page functions
+*
+**/
+
 $(".carousel").carousel();
