@@ -14,8 +14,11 @@ Make sure you have both node.js and git installed
 That's it! Focus on the bigger picture, stop sweating the small stuff.
 *
 ##Features
--SASS preprocessor
--JS concatenation
--Image optimization
--Livereload
+- SASS preprocessor
+
+- JS concatenation
+
+- Image optimization
+
+- Livereload
 
