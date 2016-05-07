@@ -1,4 +1,4 @@
-#Project Boilerplate
+#Project Taskrunner
 
 A simple repo to spin up projects, prototypes or applications.
 
