@@ -400,7 +400,7 @@ th {
   box-sizing: border-box;
 }
 
-.container, .nav_container, .main_container, .footer__container {
+.container, .nav_container, .main_container, .nav_primary, .footer__container {
   position: relative;
   max-width: 1200px;
   padding-right: 16px;
@@ -443,7 +443,7 @@ th {
   position: relative;
 }
 
-.lg_3 {
+.lg_3, .nav_secondary {
   width: 100%;
   float: left;
   padding-right: 16px;
@@ -483,7 +483,7 @@ th {
   position: relative;
 }
 
-.lg_8, main, .main_body {
+.lg_8, .main_body {
   width: 100%;
   float: left;
   padding-right: 16px;
@@ -491,7 +491,7 @@ th {
   position: relative;
 }
 
-.lg_9 {
+.lg_9, main {
   width: 100%;
   float: left;
   padding-right: 16px;
@@ -815,7 +815,7 @@ th {
     padding-left: 16px;
   }
 
-  .lg_3 {
+  .lg_3, .nav_secondary {
     width: 25%;
     float: left;
     padding-right: 16px;
@@ -850,14 +850,14 @@ th {
     padding-left: 16px;
   }
 
-  .lg_8, main, .main_body {
+  .lg_8, .main_body {
     width: 66.66667%;
     float: left;
     padding-right: 16px;
     padding-left: 16px;
   }
 
-  .lg_9 {
+  .lg_9, main {
     width: 75%;
     float: left;
     padding-right: 16px;
