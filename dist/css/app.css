@@ -483,7 +483,7 @@ th {
   position: relative;
 }
 
-.lg_8, .main_body {
+.lg_8, main, .main_body {
   width: 100%;
   float: left;
   padding-right: 16px;
@@ -850,7 +850,7 @@ th {
     padding-left: 16px;
   }
 
-  .lg_8, .main_body {
+  .lg_8, main, .main_body {
     width: 66.66667%;
     float: left;
     padding-right: 16px;
@@ -1662,7 +1662,7 @@ main {
 }
 .main {
   position: relative;
-  background: #fff;
+  background: #000;
 }
 
 .outer-wrap {

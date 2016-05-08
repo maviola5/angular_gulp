@@ -1,7 +1,11 @@
+main {
+	@extend .lg_8;
+}
 .main {
 	// width: 100%;
 	position: relative;
-	background: #fff;
+	background: #000;
+
 }
 .main_container {
 	@extend .container;
