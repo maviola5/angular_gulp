@@ -9,7 +9,7 @@ Follow these couple of steps to get started:
     $ npm install
     $ gulp watch
 
-Make sure you have both node.js and git installed and a global install of gulp...and ruby sass gem
+Make sure you have node.js, git installed, a global install of gulp...and ruby sass gem
 
 Get the party started...
 
