@@ -1,6 +1,0 @@
-/**
-*	Page functions
-*
-**/
-
-$(".carousel").carousel();

@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>crzyGUI!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>
+    <link href="css/app.min.css" rel="stylesheet">
+    <link href="css/vendor/prism.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <!-- font-family: 'Fontdiner Swanky', cursive; -->
+</head>
+<body ng-app="myApp">
+  <!-- Alternatively install the Chrome livereload plugin *** FOR DEVELOPMENT ONLY *** -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+  <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <header class="header" ng-controller="MainController">
+    <div class="header__container">
+      <div class="header__row">
+        <div class="header__case">
+          <div class="brand">crzyGUI!</div>
+          <nav class="header_nav" data-header-navigation></nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" ng-controller="MainController">
+    <div class="main__container">
+      <div class="main__row">
+        <div class="sidebar">
+        <nav class="sidebar_nav" data-sidebar-navigation></nav>
+        <nav sidebar-navigation></nav>
+        </div>
+        <article class="article" data-article></article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" ng-controller="MainController" data-footer></footer>
+
+  <!-- Concatenated Angular App -->
+  <script src="js/app/app.min.js"></script>
+
+
+  <!-- Vendor Scripts -->
+  <script src="js/vendor/prism.js"></script>
+
+</body>
+</html>

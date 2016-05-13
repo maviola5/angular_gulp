@@ -1,12 +1,9 @@
-
-
-@media screen and (min-width: 64em) {
-	.logo__title {
-	    font-size: 11px;
-	    line-height: 11px;
-	}
-	.logo__img {
-	    width: 135px;
-	}
-
+.header__container {
+	@extend .container;
+}
+.header__row {
+	@extend .row;
+}
+.header__case {
+	@extend .lg_12;
 }

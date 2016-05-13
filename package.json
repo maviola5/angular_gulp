@@ -1,7 +1,7 @@
 {
-  "name": "Gulp_Task_Runner",
+  "name": "Angular_Gulp_Project",
   "version": "1.0.0",
-  "description": "For spinning up quick prototypes.",
+  "description": "For quickly spinning up angular applications.",
   "main": "main.js",
   "scripts": {
     "": ""

@@ -34,16 +34,30 @@ gulp.task('css', function() {
     .pipe(notify({ message: 'css task complete' }));
 });
 
+//Angular Partials
+gulp.task('partials', function(){
+  return gulp.src(['src/js/app/partials/*.html'])
+    .pipe(gulp.dest('dist/js/app/partials'))
+    .pipe(notify({ message : 'partials have been transported'}));
+});
+
+//Angular View
+gulp.task('view', function(){
+  return gulp.src('src/index.html')
+    .pipe(gulp.dest('dist'))
+    .pipe(notify({ message : 'the view has been updated!'}));
+});
+
 // Scripts
 gulp.task('js', function() {
-  return gulp.src(['src/js/modules/*.js', 'src/js/app.js'])
+  return gulp.src(['src/js/app/app.js','src/js/app/controllers/*.js', 'src/js/app/directives/*.js',  'src/js/app/services/*.js'])
     // .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/js/app'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/js/app'))
     .pipe(notify({ message: 'js task complete' }));
 });
 
@@ -79,7 +93,13 @@ gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['css']);
 
   // Watch .js files
-  gulp.watch('src/js/**/*.js', ['js']);
+  gulp.watch('src/js/**/**/*.js', ['js']);
+
+  //Watch partial .html files
+  gulp.watch('src/js/app/partials', ['partials']);
+
+  //Watch the view
+  gulp.watch('src/index.html', ['view']);
 
   // Watch image files
   gulp.watch('src/img/**/*', ['img']);
