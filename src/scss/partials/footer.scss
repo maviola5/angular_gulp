@@ -1,14 +1,6 @@
-/**
-* Footer Styles 
-*/
 .footer {
-	color: #fff;
-	font-family: $font-Oswald;
-	font-weight: 300;
-	background-color: $blue;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    position: relative;
+    background-color: $blue;
+    color: #fff;
 }
 .footer__container {
     @extend .container;
@@ -16,56 +8,22 @@
 .footer__row {
     @extend .row;
 }
-.footer__block {
+.footer__case {
     @extend .lg_12;
 }
-.footer__ul {
-    list-style: none;
-    margin: 0;
+.footer__copyright {
+    margin-bottom: $font-size * 1.25;
+}
+.footer__nav {
+
+}
+.footer_nav__ul {
+    margin: $font-size * 1.25 0;
     padding: 0;
 }
-.footer__li {
-    display: inline-block;
+.footer_nav__li {
+    padding: $font-size * 0.75 0;
 }
-.footer__li:after {
-    content: "|";
-}
-.footer__li:after {
-    content: "|";
-    padding-left: 5px;
+.footer_nav__a {
     color: #fff;
-}
-.footer__li:nth-child(3):after {
-    content: "";
-}
-.footer__a {
-    color: $white;
-    text-decoration: none;
-    font-size: $font-size;
-}
-.footer__a:hover {
-	color: $white-hover;
-}
-.footer__span {
-    display: block;
-    font-size: $font-size * 0.9375;
-}
-.footer__social {
-	display: inline-block;
-	padding: 20px 5px;
-}
-.footer__social:hover {
-	opacity: 0.8;
-}	
-.footer__social:nth-child(1) {
-	padding-left: 0;
-}
-.fa_footer {
-    font-size: 30px;
-    color: $blue;
-    background: #fff;
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
 }

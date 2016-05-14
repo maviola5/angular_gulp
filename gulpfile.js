@@ -96,7 +96,7 @@ gulp.task('watch', function() {
   gulp.watch('src/js/**/**/*.js', ['js']);
 
   //Watch partial .html files
-  gulp.watch('src/js/app/partials', ['partials']);
+  gulp.watch('src/js/app/partials/*.html', ['partials']);
 
   //Watch the view
   gulp.watch('src/index.html', ['view']);

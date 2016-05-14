@@ -5,15 +5,15 @@
 html, body {
 	font-size: $font-size;
 	font-family: $font-OpenSans;
-	color : #000;
+	color : $blue;
 }
 p {
 	font-size: $font-size;
 	line-height: $mobile-line-height + em;
 	margin: 0 0 ($mobile-line-height * $font-size) 0;
 	padding: 0;
-	color: #000;
-	max-width: 35em;
+	color: $blue;
+	// max-width: 35em;
 }
 a {
 	text-decoration: none;
@@ -23,7 +23,7 @@ a {
 }
 a:hover {
 	cursor:pointer;
-	color: $blue-hover;
+	// color: $blue-hover;	
 }
 a:focus {
 	outline: none;
@@ -35,6 +35,9 @@ ul {
 }
 .disc {
 	list-style: disc;
+}
+pre[class*="language-"] {
+	margin-bottom: $font-size * 1.25;
 }
 
 $l:6;
@@ -78,4 +81,7 @@ $l:6;
 		}
 		$l: $l - 1;
 	}
+	// pre[class*="language-"] {
+	// 	margin-bottom: $font-size * 1.5;
+	// }
 }

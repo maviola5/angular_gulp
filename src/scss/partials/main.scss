@@ -4,6 +4,30 @@
 .main__row {
 	@extend .row;
 }
-.main__case {
-	@extend .lg_12;
+.sidebar {
+	@extend .md_2;
+	padding: $font-size;
+	display: none;
+}
+.sidebar_nav__ul {
+	margin: 0;
+	padding: 0;
+}
+.sidebar_nav__li {
+	padding: $font-size 0;
+}
+.sidebar_nav__a {
+	font-weight: 600;
+}
+.article {
+	@extend .lg_10;
+	padding: $font-size;
+}
+@media screen and (min-width: 40em){
+
+}
+@media screen and (min-width: 64em){
+	.sidebar {
+		display: block;
+	}
 }
