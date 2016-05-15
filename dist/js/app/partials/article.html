@@ -1,57 +1,145 @@
-<h1>Holler Back</h1>
+<h1>Style Guide</h1>
 
-<h2>Subtitle</h2> 
+<h2 id="grid">The Grid</h2> 
 
-<p>Beard locavore banh mi, quinoa gluten-free farm-to-table seitan you probably haven't heard of them pour-over readymade hella small batch 3 wolf moon semiotics. Franzen hoodie kickstarter drinking vinegar banh mi. Vinyl retro semiotics, yr tousled beard echo park butcher bushwick pop-up. Bespoke fashion axe neutra cliche. Tilde chillwave cornhole photo booth squid. Pork belly microdosing chambray, yr selvage +1 lo-fi lomo bushwick single-origin coffee cronut letterpress. Retro etsy intelligentsia single-origin coffee, cred occupy bitters listicle cray DIY gentrify street art artisan dreamcatcher.</p>
+<p>The grid is a responsive 12 column grid system.</p>
+
+<div class="display_container">
+    <div class="row">
+        <div class="lg_4">
+            <div class="display_col">.lg_4</div>
+        </div>
+        <div class="lg_4">
+            <div class="display_col">.lg_4</div>
+        </div>
+        <div class="lg_4">
+            <div class="display_col">.lg_4</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="md_3">
+            <div class="display_col">.md_3</div>
+        </div>
+        <div class="md_9">
+            <div class="display_col">.md_9</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="sm_9">
+            <div class="display_col">.sm_3</div>
+        </div>
+        <div class="sm_3">
+            <div class="display_col">.sm_9</div>
+        </div>
+    </div>
+</div>
+
+<p>Usage: </p>
 
 <pre>
-  <code class="language-css" ng-prism>
-  /* applies style to all elements */
-  * {
-  box-sizing : border-box;
-  }
-
-  /* clear fix for floating grid */
-  .clear-fix {
-  content : "";
-  display : table;
-  clear : both;
-  } 
-  </code>
+    <code class="language-html" ng-prism>
+&lt;div class="row"&gt;
+    &lt;div class="lg_4"&gt;
+        &lt;div class="display_col"&gt;.lg_4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="lg_4"&gt;
+        &lt;div class="display_col"&gt;.lg_4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="lg_4"&gt;
+        &lt;div class="display_col"&gt;.lg_4&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="md_3"&gt;
+        &lt;div class="display_col"&gt;.md_3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="md_9"&gt;
+        &lt;div class="display_col"&gt;.md_9&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+    &lt;div class="sm_9"&gt;
+        &lt;div class="display_col"&gt;.sm_9&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="sm_3"&gt;
+        &lt;div class="display_col"&gt;.sm_3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </code>
 </pre>
 
-<h2>Subtitle</h2> 
+<p>Use the <code class="language-css">.row</code> class to clear the floated column classes (<code class="language-css">.lg_*</code> <code class="language-css">.md_*</code> and <code class="language-css">.sm_*</code>). The <code class="language-css">.container</code> class can be used to contain <code class="language-css">.row</code> to a max-width.</P>
 
-<p>Beard locavore banh mi, quinoa gluten-free farm-to-table seitan you probably haven't heard of them pour-over readymade hella small batch 3 wolf moon semiotics. Franzen hoodie kickstarter drinking vinegar banh mi. Vinyl retro semiotics, yr tousled beard echo park butcher bushwick pop-up. Bespoke fashion axe neutra cliche. Tilde chillwave cornhole photo booth squid. Pork belly microdosing chambray, yr selvage +1 lo-fi lomo bushwick single-origin coffee cronut letterpress. Retro etsy intelligentsia single-origin coffee, cred occupy bitters listicle cray DIY gentrify street art artisan dreamcatcher.</p>
+<h2 id="buttons">Buttons</h2>
+
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-secondary">Secondary</button>
+<pre>
+    <code class="language-markup" ng-prism>
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+    </code>
+</pre>
+<p>Use the class <code class="language-css">.block</code> to make a button fill a column.</p>
+
+<h2 id="typography">Typography</h2> 
+<p>Base typography is simple, with margin and padding resets to create vertical rhythm. Here is how they play with each other:</p>
+<div class="display_container">
+    <div class="row">
+        <div class="md_3">
+            <h1>Heading</h1>
+            <h2>Heading</h2>
+            <h3>Heading</h3>
+            <h4>Heading</h4>
+            <h5>Heading</h5>
+            <h6>Heading</h6>
+        </div>
+        <div class="md_9">
+            <h1>Heading</h1>
+            <p>Beard locavore banh mi, quinoa gluten-free farm-to-table seitan you probably haven't heard of them pour-over readymade hella small batch 3 wolf moon semiotics. Franzen hoodie kickstarter drinking vinegar banh mi. Vinyl retro semiotics, yr tousled beard echo park butcher bushwick pop-up. Bespoke fashion axe neutra <a href="#">cliche</a>.</p>
+            <ul>
+                <li>Vinyl retro semiotics</li>
+                <li>yr tousled beard echo</li>
+                <li>butcher bushwick pop-up</li>
+            </ul>
+            <ol>
+                <li>Vinyl retro semiotics</li>
+                <li>yr tousled beard echo</li>
+                <li>butcher bushwick pop-up</li>
+            </ol>
+            <p>Beard locavore banh mi, quinoa gluten-free farm-to-table seitan you probably haven't heard of them pour-over readymade hella small batch 3 wolf moon semiotics.</p>
+        </div>
+    </div>
+</div>
 
 <pre>
-  <code class="language-javascript" ng-prism>
-  //reveal module pattern
-  var reveal = (function(){
+<code class="language-javascript" ng-prism>
+//reveal module pattern
+var reveal = (function(){
 
-      var privateVar = 'private variable';
+var privateVar = 'private variable';
 
-      var privateFunctionOne = function(){
-      console.log('I am a private function');
-      };
+var privateFunctionOne = function(){
+console.log('I am a private function');
+};
 
-      var privateFunctionTwo = function(){
-      console.log('I am yet another private function');
-      };
+var privateFunctionTwo = function(){
+console.log('I am yet another private function');
+};
 
-      return {
-      privateString : privateVar,
-      privateOne : privateFunctionOne,
-      privateTwo : privateFunctionTwo
-      };
+return {
+privateString : privateVar,
+privateOne : privateFunctionOne,
+privateTwo : privateFunctionTwo
+};
 
-  })();
+})();
 
-  //usage
-  reveal.privateString; // output : 'private variable'
-  reveal.privateOne(); // output : 'I am a private function'
-  reveal.privateTwo(); // output : 'I am yet another private function'
-  </code>
+//usage
+reveal.privateString; // output : 'private variable'
+reveal.privateOne(); // output : 'I am a private function'
+reveal.privateTwo(); // output : 'I am yet another private function'
+</code>
 </pre>
 
 <p>Beard locavore banh mi, quinoa gluten-free farm-to-table seitan you probably haven't heard of them pour-over readymade hella small batch 3 wolf moon semiotics. Franzen hoodie kickstarter drinking vinegar banh mi. Vinyl retro semiotics, yr tousled beard echo park butcher bushwick pop-up. Bespoke fashion axe neutra cliche. Tilde chillwave cornhole photo booth squid. Pork belly microdosing chambray, yr selvage +1 lo-fi lomo bushwick single-origin coffee cronut letterpress. Retro etsy intelligentsia single-origin coffee, cred occupy bitters listicle cray DIY gentrify street art artisan dreamcatcher.</p>

@@ -12,46 +12,30 @@
 	color: #fff;
 	display: inline-block;
 	text-align: center;
+	border: 2px solid $primary-color;
 }
 .btn-primary {
-	background-color: $blue;
-	color: #fff;
+	background-color: $primary-color;
+	color: $secondary-color;
 }
 .btn-primary:hover {
-	background-color: $blue-hover;
-	color: #fff;
+	background-color: $primary-color-hover;
 }
 .btn-primary:hover:active {
-	background-color: $blue-active;
-	color: #fff;
+	background-color: $primary-color-active;
 }
 .btn-secondary {
-	background-color: $green;
-	color: #fff;
+	background-color: $secondary-color;
+	color: $primary-color;
 }
 .btn-secondary:hover {
-	background-color: $green-hover;
-	color: #fff;
+	background-color: $secondary-color-hover;
 }
 .btn-secondary:hover:active {
-	background-color: $green-active;
-	color: #fff;
-}
-.btn-tertiary {
-	background-color: $orange;
-	color: #fff;
-}
-.btn-tertiary:hover {
-	background-color: $orange-hover;
-	color: #fff;
-}
-.btn-tertiary:active {
-	background-color: $orange-active;
-	color: #fff;
+	background-color: $secondary-color-active;
 }
 
 // inputs
-
 input {
 	font-family: $font-Oswald;
 	font-size: $font-size;

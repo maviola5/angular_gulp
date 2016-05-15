@@ -5,7 +5,7 @@
 html, body {
 	font-size: $font-size;
 	font-family: $font-OpenSans;
-	color : $blue;
+	color : $primary-color;
 }
 p {
 	font-size: $font-size;
@@ -18,20 +18,20 @@ p {
 a {
 	text-decoration: none;
 	font-family: inherit;
-	color: $blue;
+	color: $primary-color;
 	transition: all 0.25s;
+	font-weight: 600;
 }
 a:hover {
 	cursor:pointer;
-	// color: $blue-hover;	
+	color: $primary-color-hover;	
 }
 a:focus {
 	outline: none;
 }
 
 ul {
-	list-style: none;
-	color: #fff;
+	// list-style: none;
 }
 .disc {
 	list-style: disc;
@@ -40,48 +40,37 @@ pre[class*="language-"] {
 	margin-bottom: $font-size * 1.25;
 }
 
-$l:6;
-@for $i from 1 through 6 {
-	$j : $mobile-scale;
+@for $i from 6 through 1 {
+	$counter : 3 - $i * 0.25;
 	h#{$i} {
-	font-size: if(($font-size * $j * $l) < 16px, $font-size, ($font-size * $j * $l) );
-	line-height: $mobile-line-height + em;
-	margin: 0 0 if(($font-size * $j * $l) < 16px, (($mobile-line-height * $font-size) / 2), ($mobile-line-height * $font-size))  0;
-	padding: 0;
-	// color: #fff;
-	font-family: $font-Oswald;
-	}
-	$l: $l - 1;
-}
-//tablet
-@media screen and (min-width: 40em) {
-	$l:6;
-	@for $i from 1 through 6 {
-		$j : $tablet-scale;
-		h#{$i} {
-			font-size: if(($font-size * $j * $l) < 16px, $font-size, ($font-size * $j * $l) );
-			line-height: $desktop-line-height + em;
-			margin: 0 0 ($desktop-line-height * $font-size) 0;
-			padding: 0;
-		}
-		$l: $l - 1;
+		font-size: if(($font-size * $counter * 0.8561) < $font-size, $font-size, ($font-size * $counter * 0.8561) );
+		line-height: $mobile-line-height;
+		margin: 0 0 $font-size * $mobile-line-height;
+		padding: 0; 
+		font-family: $font-Oswald;
 	}
 }
-//Desktop
-@media screen and (min-width: 64em) {
-	$l:6;
-	@for $i from 1 through 6 {
-		$j : $desktop-scale;
+@media screen and (min-width: 40em){
+	@for $i from 6 through 1 {
+		$counter : 3.5 - $i * 0.25;
 		h#{$i} {
-			font-size: if(($font-size * $j * $l) < 16px, $font-size, ($font-size * $j * $l) );
-			line-height: $desktop-line-height + em;
-			margin: 0 0 if(($font-size * $j * $l) < 16px, ($desktop-line-height*$font-size / 2), ($desktop-line-height*$font-size) ) 0;
-			// margin: 0 0 ($desktop-line-height*$font-size) 0;
-			padding: 0;
+			font-size: if(($font-size * $counter * 0.8561) < $font-size, $font-size, ($font-size * $counter * 0.8561) );
+			line-height: $mobile-line-height;
+			margin: 0 0 $font-size * $mobile-line-height;
+			padding: 0; 
+			font-family: $font-Oswald;
 		}
-		$l: $l - 1;
 	}
-	// pre[class*="language-"] {
-	// 	margin-bottom: $font-size * 1.5;
-	// }
+}
+@media screen and (min-width: 64em){
+	@for $i from 6 through 1 {
+		$counter : 4 - $i * 0.25;
+		h#{$i} {
+			font-size: if(($font-size * $counter * 0.8561) < $font-size, $font-size, ($font-size * $counter * 0.8561) );
+			line-height: $mobile-line-height;
+			margin: 0 0 $font-size * $mobile-line-height 0;
+			padding: 0; 
+			font-family: $font-Oswald;
+		}
+	}
 }

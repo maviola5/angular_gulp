@@ -12,6 +12,7 @@
 .sidebar_nav__ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 .sidebar_nav__li {
 	padding: $font-size 0;
@@ -22,6 +23,11 @@
 .article {
 	@extend .lg_10;
 	padding: $font-size;
+}
+.brand-inline {
+	font-family: $brand-font;
+	font-size : $font-size * 3;
+	line-height: 95px;
 }
 @media screen and (min-width: 40em){
 

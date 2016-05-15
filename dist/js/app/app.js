@@ -18,16 +18,16 @@ app.controller('MainController', ['$scope', function($scope){
 
 	$scope.sidebarLinks = [
 		{
-			name : 'Link',
-			href : '#'
+			name : 'The Grid',
+			href : '#grid'
 		},
 		{
-			name : 'Link',
-			href : '#'
+			name : 'Buttons',
+			href : '#buttons'
 		},
 		{
-			name : 'Link',
-			href : '#'
+			name : 'Typography',
+			href : '#typography'
 		},
 		{
 			name : 'Link',
@@ -70,61 +70,10 @@ app.directive('article', function(){
 	};
 
 });
-app.directive('footer', function(){
-  return {
-    restrict : 'E',
-    templateUrl : 'js/app/partials/footer.html',
-    link : function(scope, elem, attrs){
-      //do stuff
-    }
-  }
-});
-app.directive("headerNavigation", function(){
-	return {
-		templateUrl: 'js/app/partials/header_navigation.html',
-		link : function(scope, elem, attrs){
-			elem.bind('click', function(){
-
-				var thisEl = angular.element(document.getElementsByClassName('brand'));
-				var active = thisEl.hasClass('active');
-
-				if(active){
-					//remove class active from brand / nav
-					thisEl.removeClass('active');
-					thisEl.next().removeClass('active');
-				} else {
-					//add class active to brand / nav
-					thisEl.addClass('active');
-					thisEl.next().addClass('active');
-				}
-			});
-		}
-	}
-});
-
-
-app.directive('helloWorld', function() {
-  return {
-    restrict: 'AE',
-    replace: true,
-    template: '<p style="background-color:{{color}}">Hello World',
-    link: function(scope, elem, attrs) {
-      elem.bind('click', function() {
-        elem.css('background-color', 'white');
-        scope.$apply(function() {
-          scope.color = "white";
-        });
-      });
-      elem.bind('mouseover', function() {
-        elem.css('cursor', 'pointer');
-      });
-    }
-  };
-});
 app.directive('menu', function(){
 	return {
 		link : function($scope, elem, attrs){
-			elem.bind('click', function(){
+			elem.on('click', function(){
 				var active = elem.hasClass('is-active');
 				if(active){
 					elem.removeClass('is-active');
@@ -150,7 +99,31 @@ app.directive('ngPrism', [function() {
 }]);
 app.directive('sidebarNavigation', function(){
 	return {
-		templateUrl : 'js/app/partials/sidebar_navigation.html'
+		replace : true,
+		templateUrl : 'js/app/partials/sidebar_navigation.html',
+		link : function(scope, elem, attrs){
+
+			var sideNavPostion = document
+				.getElementsByClassName('sidebar')[0]
+				.getBoundingClientRect().top;
+
+			angular.element(window).on("scroll", function(){
+
+				var scrollPosition = window.scrollY;
+				if(scrollPosition > sideNavPostion ){
+					angular
+					.element(document.getElementsByClassName('sidebar_nav'))
+					.css({
+						"position" : "fixed",
+						"top" : 0
+					});
+				} else {
+					angular
+					.element(document.getElementsByClassName('sidebar_nav'))
+					.css({"position" : "relative"});
+				}
+			});
+		}
 	};
 
 });

@@ -1,14 +1,16 @@
-<div class="footer__container">
-	<div class="footer__row">
-		<div class="footer__case">
-			<nav class="footer_nav">
-				<ul class="footer_nav__ul">
-					<li class="footer_nav__li" ng-repeat="footerLink in footerLinks">
-						<a ng-href="{{footerLink.href}}" class="footer_nav__a">{{footerLink.name}}</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="footer__copyright">&copy; A Stranger 2016</div>
+<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__row">
+			<div class="footer__case">
+				<nav class="footer_nav">
+					<ul class="footer_nav__ul">
+						<li class="footer_nav__li" ng-controller="MainController" ng-repeat="footerLink in footerLinks">
+							<a ng-href="{{footerLink.href}}" class="footer_nav__a">{{footerLink.name}}</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="footer__copyright">&copy; A Stranger 2016</div>
+			</div>
 		</div>
 	</div>
-</div>
+</footer>

@@ -17,16 +17,16 @@ app.controller('MainController', ['$scope', function($scope){
 
 	$scope.sidebarLinks = [
 		{
-			name : 'Link',
-			href : '#'
+			name : 'The Grid',
+			href : '#grid'
 		},
 		{
-			name : 'Link',
-			href : '#'
+			name : 'Buttons',
+			href : '#buttons'
 		},
 		{
-			name : 'Link',
-			href : '#'
+			name : 'Typography',
+			href : '#typography'
 		},
 		{
 			name : 'Link',

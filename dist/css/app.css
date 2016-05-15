@@ -442,19 +442,16 @@ a {
   font-family: inherit;
   color: #2C3E50;
   transition: all 0.25s;
+  font-weight: 600;
 }
 
 a:hover {
   cursor: pointer;
+  color: #253443;
 }
 
 a:focus {
   outline: none;
-}
-
-ul {
-  list-style: none;
-  color: #fff;
 }
 
 .disc {
@@ -465,138 +462,150 @@ pre[class*="language-"] {
   margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 31.968px;
-  line-height: 1.25em;
-  margin: 0 0 20px 0;
-  padding: 0;
-  font-family: "Oswald", sans-serif;
-}
-
-h2 {
-  font-size: 26.64px;
-  line-height: 1.25em;
-  margin: 0 0 20px 0;
-  padding: 0;
-  font-family: "Oswald", sans-serif;
-}
-
-h3 {
-  font-size: 21.312px;
-  line-height: 1.25em;
-  margin: 0 0 20px 0;
-  padding: 0;
-  font-family: "Oswald", sans-serif;
-}
-
-h4 {
-  font-size: 16px;
-  line-height: 1.25em;
-  margin: 0 0 10px 0;
+h6 {
+  font-size: 20.5464px;
+  line-height: 1.25;
+  margin: 0 0 20px;
   padding: 0;
   font-family: "Oswald", sans-serif;
 }
 
 h5 {
-  font-size: 16px;
-  line-height: 1.25em;
-  margin: 0 0 10px 0;
+  font-size: 23.9708px;
+  line-height: 1.25;
+  margin: 0 0 20px;
   padding: 0;
   font-family: "Oswald", sans-serif;
 }
 
-h6 {
-  font-size: 16px;
-  line-height: 1.25em;
-  margin: 0 0 10px 0;
+h4 {
+  font-size: 27.3952px;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+h3 {
+  font-size: 30.8196px;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  font-size: 34.244px;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-size: 37.6684px;
+  line-height: 1.25;
+  margin: 0 0 20px;
   padding: 0;
   font-family: "Oswald", sans-serif;
 }
 
 @media screen and (min-width: 40em) {
-  h1 {
-    font-size: 38.4px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
+  h6 {
+    font-size: 27.3952px;
+    line-height: 1.25;
+    margin: 0 0 20px;
     padding: 0;
-  }
-
-  h2 {
-    font-size: 32px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
-    padding: 0;
-  }
-
-  h3 {
-    font-size: 25.6px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
-    padding: 0;
-  }
-
-  h4 {
-    font-size: 19.2px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
-    padding: 0;
+    font-family: "Oswald", sans-serif;
   }
 
   h5 {
-    font-size: 16px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
+    font-size: 30.8196px;
+    line-height: 1.25;
+    margin: 0 0 20px;
     padding: 0;
+    font-family: "Oswald", sans-serif;
   }
 
-  h6 {
-    font-size: 16px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
+  h4 {
+    font-size: 34.244px;
+    line-height: 1.25;
+    margin: 0 0 20px;
     padding: 0;
+    font-family: "Oswald", sans-serif;
+  }
+
+  h3 {
+    font-size: 37.6684px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+  }
+
+  h2 {
+    font-size: 41.0928px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+  }
+
+  h1 {
+    font-size: 44.5172px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
   }
 }
 @media screen and (min-width: 64em) {
-  h1 {
-    font-size: 63.936px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
+  h6 {
+    font-size: 34.244px;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
     padding: 0;
-  }
-
-  h2 {
-    font-size: 53.28px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
-    padding: 0;
-  }
-
-  h3 {
-    font-size: 42.624px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
-    padding: 0;
-  }
-
-  h4 {
-    font-size: 31.968px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
-    padding: 0;
+    font-family: "Oswald", sans-serif;
   }
 
   h5 {
-    font-size: 21.312px;
-    line-height: 1.5em;
-    margin: 0 0 24px 0;
+    font-size: 37.6684px;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
     padding: 0;
+    font-family: "Oswald", sans-serif;
   }
 
-  h6 {
-    font-size: 16px;
-    line-height: 1.5em;
-    margin: 0 0 12px 0;
+  h4 {
+    font-size: 41.0928px;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
     padding: 0;
+    font-family: "Oswald", sans-serif;
+  }
+
+  h3 {
+    font-size: 44.5172px;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+  }
+
+  h2 {
+    font-size: 47.9416px;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+  }
+
+  h1 {
+    font-size: 51.366px;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
   }
 }
 /** 
@@ -1206,6 +1215,7 @@ img {
 .sidebar_nav__ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .sidebar_nav__li {
@@ -1218,6 +1228,12 @@ img {
 
 .article {
   padding: 16px;
+}
+
+.brand-inline {
+  font-family: "Fontdiner Swanky", cursive;
+  font-size: 48px;
+  line-height: 95px;
 }
 
 @media screen and (min-width: 64em) {
@@ -1237,6 +1253,7 @@ img {
 .footer_nav__ul {
   margin: 20px 0;
   padding: 0;
+  list-style: none;
 }
 
 .footer_nav__li {
@@ -1245,4 +1262,89 @@ img {
 
 .footer_nav__a {
   color: #fff;
+}
+
+.display_container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.display_col {
+  background-color: #2C3E50;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  margin-bottom: 16px;
+}
+
+/** 
+*Buttons Styles 
+*/
+.btn {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  padding: 0.5em 0.625em;
+  line-height: 1em;
+  margin-bottom: 0.625em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #2C3E50;
+}
+
+.btn-primary {
+  background-color: #2C3E50;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #253443;
+}
+
+.btn-primary:hover:active {
+  background-color: #1e2a37;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #2C3E50;
+}
+
+.btn-secondary:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-secondary:hover:active {
+  background-color: #ebebeb;
+}
+
+input {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  padding: 0.5em 0.625em;
+  display: block;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 64em) {
+  .btn {
+    font-size: 20px;
+    padding: 1em 1.5em;
+    line-height: 1em;
+    margin-bottom: 1.5em;
+  }
+}
+.btn-sm {
+  font-size: 16px;
+}
+
+.btn-lg {
+  font-size: 24px;
 }
