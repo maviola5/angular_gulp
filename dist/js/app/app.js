@@ -30,8 +30,8 @@ app.controller('MainController', ['$scope', function($scope){
 			href : '#typography'
 		},
 		{
-			name : 'Link',
-			href : '#'
+			name : 'Carousel',
+			href : '#carousel'
 		},
 		{
 			name : 'Link',

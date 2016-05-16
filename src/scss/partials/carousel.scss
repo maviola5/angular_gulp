@@ -1,0 +1,101 @@
+.carousel {
+	position: relative;
+	max-height: 400px;
+	min-width: 100%;
+	overflow: hidden;
+	background: #000;
+	margin-right: -16px;
+	margin-left: -16px;
+    margin-bottom: 16px;
+}
+.carousel__slide {
+	background-repeat: no-repeat;
+	position: absolute;
+	height: auto;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-size: auto 100%;
+    background-position: center;
+    overflow: hidden;
+    background-size: auto 100%;
+    background-position: center;
+}
+.carousel__slide_nodes {
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 100%;
+    max-width: $container-width;
+    margin-right: auto;
+    margin-left: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0 20px;
+    text-align: center;
+}
+.carousel__slide_node {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    margin: 10px;
+    border-radius: 20px;
+}
+.carousel__controls_prev,
+.carousel__controls_next {
+	position: absolute;
+    margin: auto;
+    top: 0;
+   	bottom: 0;
+   	font-size: 128px;
+    z-index: 1;
+    color: #fff;
+    height: 50%;
+    display: none;
+}
+.carousel__controls_prev {
+    left: 0;
+}
+.carousel__controls_next {
+    right: 0;
+}
+// 
+.is-active.carousel__slide_node {
+    box-shadow: 0 0 40px 10px #ff0;
+    background-color: #ff0;
+}
+.is-prev.carousel__slide,
+.is-next.carousel__slide {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+}
+.is-prev.carousel__slide {
+    left: -100%;
+}
+.is-next.carousel__slide {
+    left: 100%;
+}
+.is-active.carousel__slide {
+    display: block;
+    position: relative;
+}
+@media screen and (min-width: 40em) {
+	.carousel {
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.carousel__controls_prev,
+	.carousel__controls_next {
+		display: block;
+	}
+}
+@media screen and (min-width: 64em) {
+	.carousel {
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+}
